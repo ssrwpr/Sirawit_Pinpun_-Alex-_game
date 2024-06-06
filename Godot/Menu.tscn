@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://cor21c22lbnqq"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_c4j8a"]
+[ext_resource type="Texture2D" uid="uid://ddijkjud5yuul" path="res://Background/a26b0c89c4bf869ae7a903bfd9d63617.jpg" id="2_sm275"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c4j8a")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 1150.0
+offset_bottom = 648.0
+texture = ExtResource("2_sm275")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -283.0
+offset_right = 283.0
+offset_bottom = 146.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 106
+text = "Snail game"
+
+[node name="CanvasLayer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = -60.0
+offset_right = 158.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="CanvasLayer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Play "
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Quit"
+
+[connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]

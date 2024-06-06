@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce8jtirbf5ysj"]
+
+[ext_resource type="Script" path="res://Win.gd" id="1_xhrex"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -105.0
+offset_top = 4.0
+offset_right = -105.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xhrex")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 423.0
+offset_top = 187.0
+offset_right = 737.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 82
+text = "You win"
+
+[node name="Next Level" type="Button" parent="CanvasLayer"]
+offset_left = 467.0
+offset_top = 305.0
+offset_right = 707.0
+offset_bottom = 415.0
+theme_override_font_sizes/font_size = 46
+text = "Next Level"
+
+[node name="Level Grid" type="Button" parent="CanvasLayer"]
+offset_left = 467.0
+offset_top = 434.0
+offset_right = 707.0
+offset_bottom = 547.0
+theme_override_font_sizes/font_size = 46
+text = "Level Grid
+"
+
+[connection signal="pressed" from="CanvasLayer/Next Level" to="." method="_nextlevel"]
+[connection signal="pressed" from="CanvasLayer/Level Grid" to="." method="_levelgrid"]

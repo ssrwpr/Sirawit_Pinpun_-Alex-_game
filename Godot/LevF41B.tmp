@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://ydt6677juhhv"]
+
+[ext_resource type="PackedScene" uid="uid://bunnqcu0gxdwv" path="res://Player_Scene.tscn" id="1_osn6i"]
+[ext_resource type="PackedScene" uid="uid://c408e8nqg4fc3" path="res://Coin.tscn" id="2_ctx8y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3u3d"]
+size = Vector2(239, 35.25)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(169, 206)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-7.5, 34.625)
+shape = SubResource("RectangleShape2D_s3u3d")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -127.5
+offset_top = 16.625
+offset_right = 112.5
+offset_bottom = 52.625
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(461, 195)
+rotation = -0.275119
+shape = SubResource("RectangleShape2D_s3u3d")
+
+[node name="ColorRect2" type="ColorRect" parent="StaticBody2D2"]
+offset_left = 342.0
+offset_top = 210.0
+offset_right = 582.0
+offset_bottom = 245.0
+rotation = -0.270414
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(742, 305)
+shape = SubResource("RectangleShape2D_s3u3d")
+
+[node name="ColorRect3" type="ColorRect" parent="StaticBody2D3"]
+offset_left = 622.0
+offset_top = 288.0
+offset_right = 861.0
+offset_bottom = 324.0
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(-138, 215)
+shape = SubResource("RectangleShape2D_s3u3d")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D4"]
+offset_left = -257.0
+offset_top = 197.0
+offset_right = -17.0
+offset_bottom = 233.0
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_osn6i")]
+position = Vector2(183, 180)
+
+[node name="Area2D" parent="." instance=ExtResource("2_ctx8y")]
+position = Vector2(279, 178)
