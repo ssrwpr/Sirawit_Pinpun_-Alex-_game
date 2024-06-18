@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://txsevfipqhvx"
-path="res://.godot/imported/bright-yellow-star-pixel-card-vector-21272762.webp-3cff6916ce2571e91bede7c1e133e818.ctex"
+uid="uid://b6r7bxw1wo8vj"
+path="res://.godot/imported/Bee1.png-3188d6f0d05c661ca5ce97e9c1bd44da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Star/bright-yellow-star-pixel-card-vector-21272762.webp"
-dest_files=["res://.godot/imported/bright-yellow-star-pixel-card-vector-21272762.webp-3cff6916ce2571e91bede7c1e133e818.ctex"]
+source_file="res://Enemy/Bee1.png"
+dest_files=["res://.godot/imported/Bee1.png-3188d6f0d05c661ca5ce97e9c1bd44da.ctex"]
 
 [params]
 

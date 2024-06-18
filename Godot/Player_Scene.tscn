@@ -1,35 +1,48 @@
-[gd_scene load_steps=5 format=3 uid="uid://bunnqcu0gxdwv"]
+[gd_scene load_steps=7 format=3 uid="uid://bunnqcu0gxdwv"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_8caih"]
 [ext_resource type="Texture2D" uid="uid://bon6gs01aw7cu" path="res://Player/Layer 1 copy.png" id="2_7ip8a"]
+[ext_resource type="Texture2D" uid="uid://bjv76ka68bmje" path="res://Player/Layer 1.png" id="3_6bn7u"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dxww"]
-size = Vector2(46, 30)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgs6p"]
+size = Vector2(49, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mnw0s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7ip8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6bn7u")
+}],
+"loop": true,
+"name": &"Snail",
+"speed": 3.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwp41"]
-size = Vector2(46, 30)
+size = Vector2(49, 31)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(1.411, 1.411)
 script = ExtResource("1_8caih")
 
-[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2.38419e-07, 3.8147e-06)
-scale = Vector2(1.41111, 1.45)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_3dxww")
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_xgs6p")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(3.8147e-06, -4.76837e-07)
+sprite_frames = SubResource("SpriteFrames_mnw0s")
+animation = &"Snail"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_pwp41")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
-
-[node name="Layer1Copy" type="Sprite2D" parent="."]
-texture = ExtResource("2_7ip8a")
-
 [connection signal="area_entered" from="Area2D" to="." method="_death"]
-[connection signal="area_entered" from="Area2D" to="." method="_coin"]
 [connection signal="area_entered" from="Area2D" to="." method="_win"]
+[connection signal="area_entered" from="Area2D" to="." method="_coin"]

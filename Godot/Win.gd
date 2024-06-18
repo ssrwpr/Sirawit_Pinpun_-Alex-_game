@@ -1,7 +1,11 @@
 extends Control
-	
+@onready var global = get_node("/root/Global")
+
+
 func _nextlevel():
-		get_tree().change_scene_to_file("res://Level2.tscn")
+	global.next_level += 1
+	get_tree().change_scene_to_file(global.levels[global.next_level])
 	
-func _levelgrid():
-	get_tree().change_scene_to_file("res://Level_Grid.tscn")
+func _playagain():
+	global.next_level += 0
+	get_tree().change_scene_to_file(global.levels[global.next_level])
