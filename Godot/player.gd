@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @onready var animation = $Area2D/AnimatedSprite2D2
 
-@export var SPEED = 100.0
+@export var SPEED = 200
 
 var coin = 0
 var total_coins = 0
@@ -50,4 +50,12 @@ func _win(area):
 		if total_coins == global.star:
 			get_tree().change_scene_to_file("res://Win.tscn")
 		
-		
+func _portal(area):
+	if area.has_meta("Portal"):
+		area.do_lock()
+		global_position = area.portal_location
+
+	
+
+
+

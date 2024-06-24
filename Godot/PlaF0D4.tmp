@@ -27,7 +27,6 @@ size = Vector2(49, 31)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(1.411, 1.411)
 script = ExtResource("1_8caih")
-SPEED = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -0.5)

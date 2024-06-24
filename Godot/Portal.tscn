@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgp7s1qat4j6i"]
+[gd_scene load_steps=3 format=3 uid="uid://dgp7s1qat4j6i"]
+
+[ext_resource type="Script" path="res://Portal.gd" id="1_u1sti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ihq0"]
 size = Vector2(45, 72.25)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["portal"]]
+script = ExtResource("1_u1sti")
+metadata/Portal = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_8ihq0")
