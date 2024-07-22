@@ -133,6 +133,8 @@ text = "1"
 
 [node name="Area2D" parent="." instance=ExtResource("9_ll6jm")]
 position = Vector2(38, 282)
+id = 0
 
 [node name="Area2D2" parent="." instance=ExtResource("9_ll6jm")]
 position = Vector2(630, 284)
+id = 0

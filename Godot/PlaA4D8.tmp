@@ -27,7 +27,6 @@ size = Vector2(49, 31)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(1.411, 1.411)
 script = ExtResource("1_8caih")
-SPEED = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -0.5)
@@ -44,8 +43,8 @@ animation = &"Snail"
 position = Vector2(-0.708717, -0.708717)
 shape = SubResource("RectangleShape2D_pwp41")
 
-[connection signal="area_entered" from="Area2D" to="." method="_coin"]
 [connection signal="area_entered" from="Area2D" to="." method="_portal"]
-[connection signal="area_entered" from="Area2D" to="." method="_win"]
 [connection signal="area_entered" from="Area2D" to="." method="_death"]
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_win"]
+[connection signal="area_entered" from="Area2D" to="." method="_coin"]
+[connection signal="area_exited" from="Area2D" to="." method="_exit"]

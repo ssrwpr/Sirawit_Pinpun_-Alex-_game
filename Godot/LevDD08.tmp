@@ -59,6 +59,7 @@ script = ExtResource("1_lvsyv")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_osn6i")]
 position = Vector2(203, 298)
+SPEED = 200
 
 [node name="Coin4" parent="." instance=ExtResource("2_ctx8y")]
 position = Vector2(333, 300)
@@ -132,7 +133,7 @@ theme_override_font_sizes/font_size = 100
 text = "1"
 
 [node name="Area2D" parent="." instance=ExtResource("9_ll6jm")]
-position = Vector2(38, 282)
+position = Vector2(68, 277)
 
 [node name="Area2D2" parent="." instance=ExtResource("9_ll6jm")]
-position = Vector2(630, 284)
+position = Vector2(640, 280)

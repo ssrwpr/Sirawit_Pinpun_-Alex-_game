@@ -1,14 +1,11 @@
 extends Area2D
 
-var portal_location = Vector2()
+@export var id := 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	for portal in get_tree().get_nodes_in_group("portal"):
-		if not portal == self:
-			portal_location = portal.global_position
+var lock_portal = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func do_lock():
+	lock_portal = true
+	await get_tree().create_timer(0.3).timeout
+	lock_portal = false

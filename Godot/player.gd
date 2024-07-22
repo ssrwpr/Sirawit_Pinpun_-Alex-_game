@@ -5,6 +5,7 @@ extends CharacterBody2D
 
 var coin = 0
 var total_coins = 0
+var portal_id = 0
 
 @onready var coins_group = get_tree().get_nodes_in_group("coins")
 @onready var global = get_node("/root/Global")
@@ -50,12 +51,29 @@ func _win(area):
 		if total_coins == global.star:
 			get_tree().change_scene_to_file("res://Win.tscn")
 		
-func _portal(area):
-	if area.has_meta("Portal"):
-		area.do_lock()
-		global_position = area.portal_location
+
+		
+
+		
 
 	
 
 
 
+
+
+func _on_area_2d_area_entered(area):
+	if area.is_in_group("hurt_player"):
+	elif area.is_in_group("portal"):
+		if(!area.lock_portal):
+			do_teleport(area)
+	pass 
+	
+func do_teleport(area):
+	for portal in get_tree().get_nodes_in_group("portal"):
+		if(portal != area):
+			if(portal.id == area.id):
+				if(!portal.lock_portal):
+					
+					area.do_lock()
+					global_position = portal.global_position

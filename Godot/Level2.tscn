@@ -43,6 +43,7 @@ script = ExtResource("1_nuh6m")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_6tso7")]
 position = Vector2(104, 196)
+SPEED = null
 
 [node name="Area2D" parent="." instance=ExtResource("2_lrdj3")]
 position = Vector2(235, 144)
