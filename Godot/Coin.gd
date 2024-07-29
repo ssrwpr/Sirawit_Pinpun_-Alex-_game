@@ -13,7 +13,7 @@ func _process(delta):
 	
 func _collect(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
-		global.star += 1
+		global.star -= 1
 		queue_free()
 
 

@@ -1,11 +1,13 @@
 extends CharacterBody2D
 @onready var animation = $Area2D/AnimatedSprite2D2
 
+@export var JUMP_VELOCITY = -400.0
 @export var SPEED = 200
 
 var coin = 0
 var total_coins = 0
 var portal_id = 0
+
 
 @onready var coins_group = get_tree().get_nodes_in_group("coins")
 @onready var global = get_node("/root/Global")
@@ -13,8 +15,7 @@ var portal_id = 0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
-	animation.play("Snail")
-	global.star = 0
+	global.star = 3
 	global.health = 3
 	for coin in coins_group:
 		total_coins += 1
@@ -48,7 +49,8 @@ func _death(area):
 
 func _win(area):
 	if area.has_meta("Door"):
-		if total_coins == global.star:
+		print(total_coins)
+		if total_coins == 3:
 			get_tree().change_scene_to_file("res://Win.tscn")
 		
 
@@ -64,10 +66,12 @@ func _win(area):
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("hurt_player"):
+		pass
 	elif area.is_in_group("portal"):
 		if(!area.lock_portal):
 			do_teleport(area)
-	pass 
+	else:
+		pass 
 	
 func do_teleport(area):
 	for portal in get_tree().get_nodes_in_group("portal"):
