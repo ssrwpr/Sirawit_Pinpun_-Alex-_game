@@ -45,12 +45,6 @@ script = ExtResource("1_nuh6m")
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_6tso7")]
 position = Vector2(161, 201)
 
-[node name="Area2D" parent="." instance=ExtResource("2_lrdj3")]
-position = Vector2(191, 155)
-
-[node name="Area2D3" parent="." instance=ExtResource("2_lrdj3")]
-position = Vector2(-253, 175)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_iau80")
 
@@ -70,11 +64,17 @@ offset_bottom = 32.0
 text = "Lives : 3"
 script = ExtResource("2_2iko5")
 
-[node name="Area2D2" parent="." instance=ExtResource("5_adxne")]
-position = Vector2(-96, 155)
-
-[node name="Area2D4" parent="." instance=ExtResource("6_1fni7")]
-position = Vector2(139, 318)
+[node name="Level 2" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -28.5
+offset_right = 28.5
+offset_bottom = 137.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "2"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4d5l0")
@@ -91,28 +91,31 @@ color = Color(0.0862745, 0.0862745, 0.0862745, 1)
 
 [node name="PauseMenu" parent="." instance=ExtResource("9_5ec20")]
 visible = false
+offset_left = 581.0
+offset_top = -145.0
+offset_right = 581.0
+offset_bottom = -145.0
 
-[node name="Label" type="Label" parent="."]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -19.0
-offset_top = -64.0
-offset_right = 38.0
-offset_bottom = 73.0
-grow_horizontal = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 100
-text = "2"
+[node name="Star 1" parent="." instance=ExtResource("2_lrdj3")]
+position = Vector2(393, 371)
 
-[node name="Area2D5" parent="." instance=ExtResource("10_j02wf")]
+[node name="Star 2" parent="." instance=ExtResource("2_lrdj3")]
+position = Vector2(-242, 226)
+
+[node name="Star 3" parent="." instance=ExtResource("2_lrdj3")]
+position = Vector2(-171, 367)
+
+[node name="Portal 1" parent="." instance=ExtResource("10_j02wf")]
 position = Vector2(276, 186)
 
-[node name="Area2D6" parent="." instance=ExtResource("10_j02wf")]
-position = Vector2(-179, 170)
+[node name="Portal 2" parent="." instance=ExtResource("10_j02wf")]
+position = Vector2(-179, 173)
 
-[node name="Area2D7" parent="." instance=ExtResource("5_adxne")]
+[node name="Exit" parent="." instance=ExtResource("6_1fni7")]
+position = Vector2(139, 318)
+
+[node name="Bee 1" parent="." instance=ExtResource("5_adxne")]
+position = Vector2(-96, 155)
+
+[node name="Bee 2" parent="." instance=ExtResource("5_adxne")]
 position = Vector2(-196, 304)
-
-[node name="Area2D8" parent="." instance=ExtResource("2_lrdj3")]
-position = Vector2(309, 245)

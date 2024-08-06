@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci66d14pkkvmj"]
+
+[ext_resource type="Script" path="res://How.gd" id="1_u27mr"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u27mr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 576.0
+theme_override_font_sizes/font_size = 40
+text = "                                              How to play?
+
+1. First, you have to find and collect 3 stars by clicking on it.
+
+2. After you have found 3 stars, then you have to figure 
+    out how to go to the exit portal, so that you can move to 
+    the another level.
+
+3. Finish all of the levels to achieve the game."
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 24.0
+offset_right = 308.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 26
+text = "Esc - Pause the game
+R - Restart the game"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.944
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = -65.712
+offset_right = 106.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 46
+text = "Back To The Main Menu"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

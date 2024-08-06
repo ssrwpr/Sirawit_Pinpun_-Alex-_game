@@ -15,7 +15,7 @@ var portal_id = 0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
-	global.star = 3
+	global.star = 0
 	global.health = 3
 	for coin in coins_group:
 		total_coins += 1
@@ -54,11 +54,10 @@ func _death(area):
 
 
 func _win(area):
-	if area.has_meta("Door"):
-		print(total_coins)
-		if total_coins == 3:
+	if area.has_meta("Door"):		
+		if total_coins == global.star:
 			get_tree().change_scene_to_file("res://Win.tscn")
-		
+			
 
 		
 
