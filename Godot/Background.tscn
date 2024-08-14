@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://di8kmkrdvxytu"]
+
+[ext_resource type="Texture2D" uid="uid://c0jhw6hm3sgoc" path="res://Background.png" id="1_pdxag"]
+
+[node name="Node2D" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="Background" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(576, 324)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_pdxag")

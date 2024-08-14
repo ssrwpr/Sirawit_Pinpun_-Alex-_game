@@ -1,8 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://ydt6677juhhv"]
+[gd_scene load_steps=17 format=3 uid="uid://ydt6677juhhv"]
 
 [ext_resource type="Script" path="res://Level.gd" id="1_lvsyv"]
-[ext_resource type="PackedScene" uid="uid://bunnqcu0gxdwv" path="res://Player_Scene.tscn" id="1_osn6i"]
 [ext_resource type="PackedScene" uid="uid://c408e8nqg4fc3" path="res://Coin.tscn" id="2_ctx8y"]
+[ext_resource type="Texture2D" uid="uid://c0jhw6hm3sgoc" path="res://Background.png" id="2_rudm5"]
 [ext_resource type="Script" path="res://UI.gd" id="3_3fyxr"]
 [ext_resource type="PackedScene" uid="uid://c46f07pp2oom3" path="res://Bee.tscn" id="3_n4y4c"]
 [ext_resource type="Script" path="res://Health.gd" id="5_kw1di"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bjxgaamw0n5m2" path="res://TileMapp.png" id="8_ccyql"]
 [ext_resource type="PackedScene" uid="uid://dgp7s1qat4j6i" path="res://Portal.tscn" id="9_ll6jm"]
 [ext_resource type="PackedScene" uid="uid://blpwxgr8te36e" path="res://pause_menu.tscn" id="11_7drx3"]
+[ext_resource type="PackedScene" uid="uid://c7je6d5ckeckx" path="res://Player_spawn.tscn" id="11_p8qhi"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rruws"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -57,8 +58,13 @@ sources/1 = SubResource("TileSetAtlasSource_t7gam")
 position = Vector2(393, 145)
 script = ExtResource("1_lvsyv")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_osn6i")]
-position = Vector2(193, 300)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -393.0
+offset_top = -145.0
+offset_right = 758.0
+offset_bottom = 502.0
+texture = ExtResource("2_rudm5")
+expand_mode = 1
 
 [node name="PauseMenu" parent="." instance=ExtResource("11_7drx3")]
 visible = false
@@ -114,30 +120,38 @@ layer_1/name = "Background"
 layer_1/z_index = -1
 layer_1/tile_data = PackedInt32Array()
 
+[node name="Node2D" parent="." instance=ExtResource("11_p8qhi")]
+position = Vector2(209, 303)
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(1, -1)
-color = Color(0.0862745, 0.0862745, 0.0862745, 1)
+color = Color(0, 0, 0, 1)
 
-[node name="Star 1" parent="." instance=ExtResource("2_ctx8y")]
-position = Vector2(379, 342)
+[node name="Portal 1" parent="CanvasModulate" instance=ExtResource("9_ll6jm")]
+position = Vector2(629, 285)
 
-[node name="Star 2" parent="." instance=ExtResource("2_ctx8y")]
-position = Vector2(-33, 0)
+[node name="Star 1" parent="CanvasModulate" instance=ExtResource("2_ctx8y")]
+position = Vector2(631, 337)
+rotation = 0.334954
 
-[node name="Star 3" parent="." instance=ExtResource("2_ctx8y")]
-position = Vector2(-138, 128)
+[node name="Star 2" parent="CanvasModulate" instance=ExtResource("2_ctx8y")]
+position = Vector2(-33, 1)
+rotation = 0.157885
+scale = Vector2(0.56376, 0.613422)
 
-[node name="Portal 1" parent="." instance=ExtResource("9_ll6jm")]
-position = Vector2(630, 284)
+[node name="Star 3" parent="CanvasModulate" instance=ExtResource("2_ctx8y")]
+position = Vector2(-154, 130)
+rotation = -0.23068
+scale = Vector2(0.649725, 0.689736)
 
-[node name="Portal 2" parent="." instance=ExtResource("9_ll6jm")]
-position = Vector2(-55, -51)
+[node name="Portal 2" parent="CanvasModulate" instance=ExtResource("9_ll6jm")]
+position = Vector2(-56, -50)
 
-[node name="Exit" parent="." instance=ExtResource("6_m8n87")]
-position = Vector2(139, 76)
+[node name="Exit" parent="CanvasModulate" instance=ExtResource("6_m8n87")]
+position = Vector2(138, 77)
 
-[node name="Bee 1" parent="." instance=ExtResource("3_n4y4c")]
-position = Vector2(95, 262)
+[node name="Bee 1" parent="CanvasModulate" instance=ExtResource("3_n4y4c")]
+position = Vector2(94, 263)
 
-[node name="Bee 2" parent="." instance=ExtResource("3_n4y4c")]
-position = Vector2(41, 19)
+[node name="Bee 2" parent="CanvasModulate" instance=ExtResource("3_n4y4c")]
+position = Vector2(40, 20)

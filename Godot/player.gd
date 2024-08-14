@@ -43,14 +43,15 @@ func _physics_process(delta):
 	
 		
 func _death(area):
-	if area.has_meta("spike"):
+	if area.has_meta("Bee"):
 		if global.health > 0:
-			position = Vector2(183, 180)
+		
 			global.health -= 1
+			queue_free()
 		else:
 			get_tree().reload_current_scene()
 		
-		position = Vector2(183, 180)
+		
 
 
 func _win(area):

@@ -11,6 +11,7 @@ script = ExtResource("1_6rlxn")
 metadata/coin = true
 
 [node name="SeekPng_comStar-png1569257" type="Sprite2D" parent="."]
+modulate = Color(0.238166, 0.163095, 0.0784798, 1)
 position = Vector2(0, -1)
 scale = Vector2(0.0144519, 0.0138801)
 texture = ExtResource("2_0xi81")

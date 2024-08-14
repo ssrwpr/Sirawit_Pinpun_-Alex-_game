@@ -60,7 +60,7 @@ position = Vector2(393, 145)
 script = ExtResource("1_8jt7r")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_vsr7e")]
-position = Vector2(166, 192)
+position = Vector2(155, 205)
 
 [node name="PauseMenu" parent="." instance=ExtResource("10_0wwu2")]
 visible = false
@@ -111,14 +111,14 @@ layer_1/tile_data = PackedInt32Array()
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(1, 0)
-color = Color(0.0862745, 0.0862745, 0.0862745, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="Star 1" parent="." instance=ExtResource("2_aa1lt")]
 position = Vector2(530, 254)
 rotation = 0.897987
 
 [node name="Star 2" parent="." instance=ExtResource("2_aa1lt")]
-position = Vector2(-19, 270)
+position = Vector2(-199, 356)
 rotation = -0.463498
 
 [node name="Portal 1" parent="." instance=ExtResource("11_tys68")]
@@ -131,7 +131,7 @@ position = Vector2(-116, 156)
 position = Vector2(188, 334)
 
 [node name="Bee 1" parent="." instance=ExtResource("5_gqk55")]
-position = Vector2(-18, 246)
+position = Vector2(0, 234)
 
 [node name="Area2D" parent="." instance=ExtResource("2_aa1lt")]
 position = Vector2(-57, 353)

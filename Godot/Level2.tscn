@@ -1,6 +1,5 @@
 [gd_scene load_steps=14 format=3 uid="uid://b80ie53h6q4c2"]
 
-[ext_resource type="PackedScene" uid="uid://bunnqcu0gxdwv" path="res://Player_Scene.tscn" id="1_6tso7"]
 [ext_resource type="Script" path="res://UI.gd" id="1_iau80"]
 [ext_resource type="Script" path="res://Level2.gd" id="1_nuh6m"]
 [ext_resource type="Script" path="res://Health.gd" id="2_2iko5"]
@@ -10,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c372wybvqb734" path="res://TileMap.png" id="7_57pbb"]
 [ext_resource type="PackedScene" uid="uid://blpwxgr8te36e" path="res://pause_menu.tscn" id="9_5ec20"]
 [ext_resource type="PackedScene" uid="uid://dgp7s1qat4j6i" path="res://Portal.tscn" id="10_j02wf"]
+[ext_resource type="PackedScene" uid="uid://c7je6d5ckeckx" path="res://Player_spawn.tscn" id="10_wds2j"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rruws"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -41,9 +41,6 @@ sources/0 = SubResource("TileSetAtlasSource_wj3dg")
 [node name="Node2D" type="Node2D"]
 position = Vector2(393, 145)
 script = ExtResource("1_nuh6m")
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_6tso7")]
-position = Vector2(161, 201)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_iau80")
@@ -87,7 +84,7 @@ layer_1/tile_data = PackedInt32Array()
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(1, 0)
-color = Color(0.0862745, 0.0862745, 0.0862745, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="PauseMenu" parent="." instance=ExtResource("9_5ec20")]
 visible = false
@@ -119,3 +116,6 @@ position = Vector2(-96, 155)
 
 [node name="Bee 2" parent="." instance=ExtResource("5_adxne")]
 position = Vector2(-196, 304)
+
+[node name="Node2D" parent="." instance=ExtResource("10_wds2j")]
+position = Vector2(195, 192)
