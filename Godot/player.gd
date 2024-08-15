@@ -45,9 +45,7 @@ func _physics_process(delta):
 func _death(area):
 	if area.has_meta("Bee"):
 		if global.health > 0:
-		
 			global.health -= 1
-			queue_free()
 		else:
 			get_tree().reload_current_scene()
 		
