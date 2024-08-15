@@ -46,6 +46,7 @@ func _death(area):
 	if area.has_meta("Bee"):
 		if global.health > 0:
 			global.health -= 1
+			global_position = get_node("/root/Node2D/Respawn").global_position
 		else:
 			get_tree().reload_current_scene()
 		
