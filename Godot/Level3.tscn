@@ -127,17 +127,17 @@ position = Vector2(1, 0)
 color = Color(0.054902, 0.054902, 0.054902, 1)
 
 [node name="Star 1" parent="." instance=ExtResource("2_aa1lt")]
-position = Vector2(530, 254)
+position = Vector2(537, 246)
 rotation = 0.897987
 
 [node name="Star 2" parent="." instance=ExtResource("2_aa1lt")]
-position = Vector2(-191, 353)
+position = Vector2(-120, 208)
 rotation = -0.463498
 scale = Vector2(0.810218, 0.779406)
 
 [node name="Star3" parent="." instance=ExtResource("2_aa1lt")]
-position = Vector2(137, 385)
-rotation = -0.911678
+position = Vector2(556, 385)
+rotation = 0.268683
 scale = Vector2(0.869518, 0.934026)
 
 [node name="Portal 1" parent="." instance=ExtResource("11_tys68")]
@@ -150,4 +150,7 @@ position = Vector2(-116, 156)
 position = Vector2(188, 334)
 
 [node name="Bee 1" parent="." instance=ExtResource("5_gqk55")]
-position = Vector2(0, 234)
+position = Vector2(14, 166)
+
+[node name="Area2D" parent="." instance=ExtResource("5_gqk55")]
+position = Vector2(587, 287)
