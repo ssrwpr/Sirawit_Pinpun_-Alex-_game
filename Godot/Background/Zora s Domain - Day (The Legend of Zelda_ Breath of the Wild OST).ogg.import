@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cynebe0u51feq"
+path="res://.godot/imported/Zora s Domain - Day (The Legend of Zelda_ Breath of the Wild OST).ogg-2ae4f0c16d8b8f2f7b4aadc2a231dae8.oggvorbisstr"
+
+[deps]
+
+source_file="res://Background/Zora s Domain - Day (The Legend of Zelda_ Breath of the Wild OST).ogg"
+dest_files=["res://.godot/imported/Zora s Domain - Day (The Legend of Zelda_ Breath of the Wild OST).ogg-2ae4f0c16d8b8f2f7b4aadc2a231dae8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

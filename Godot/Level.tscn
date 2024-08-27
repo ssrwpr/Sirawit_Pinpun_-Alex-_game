@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ydt6677juhhv"]
+[gd_scene load_steps=18 format=3 uid="uid://ydt6677juhhv"]
 
 [ext_resource type="Script" path="res://Level.gd" id="1_lvsyv"]
 [ext_resource type="PackedScene" uid="uid://c408e8nqg4fc3" path="res://Coin.tscn" id="2_ctx8y"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dgp7s1qat4j6i" path="res://Portal.tscn" id="9_ll6jm"]
 [ext_resource type="PackedScene" uid="uid://blpwxgr8te36e" path="res://pause_menu.tscn" id="11_7drx3"]
 [ext_resource type="PackedScene" uid="uid://c7je6d5ckeckx" path="res://Player_spawn.tscn" id="11_p8qhi"]
+[ext_resource type="AudioStream" uid="uid://cynebe0u51feq" path="res://Background/Zora s Domain - Day (The Legend of Zelda_ Breath of the Wild OST).ogg" id="13_5ug1u"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rruws"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -67,16 +68,15 @@ texture = ExtResource("2_rudm5")
 expand_mode = 1
 
 [node name="PauseMenu" parent="." instance=ExtResource("11_7drx3")]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 581.0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 579.0
 offset_top = -145.0
-offset_right = 581.0
+offset_right = 579.0
 offset_bottom = -145.0
+grow_horizontal = 1
+grow_vertical = 1
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
@@ -159,3 +159,7 @@ position = Vector2(95, 262)
 
 [node name="Bee 2" parent="." instance=ExtResource("3_n4y4c")]
 position = Vector2(45, 12)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_5ug1u")
+autoplay = true
