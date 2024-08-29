@@ -91,9 +91,14 @@ theme_override_font_sizes/font_size = 100
 text = "2"
 
 [node name="Star 2" parent="." instance=ExtResource("2_lrdj3")]
-position = Vector2(-252, 233)
+position = Vector2(-256, 220)
 rotation = -0.364448
 scale = Vector2(0.692514, 0.743377)
+
+[node name="Star 1" parent="." instance=ExtResource("2_lrdj3")]
+position = Vector2(51, 430)
+rotation = 0.499876
+scale = Vector2(0.591142, 0.585611)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4d5l0")
@@ -109,13 +114,9 @@ layer_1/z_index = -1
 layer_1/tile_data = PackedInt32Array()
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 position = Vector2(1, 0)
 color = Color(0.054902, 0.054902, 0.054902, 1)
-
-[node name="Star 1" parent="." instance=ExtResource("2_lrdj3")]
-position = Vector2(41, 360)
-rotation = -0.362349
-scale = Vector2(0.484634, 0.453579)
 
 [node name="Star 3" parent="." instance=ExtResource("2_lrdj3")]
 position = Vector2(-97, 368)
