@@ -4,8 +4,11 @@ extends Control
 
 func _nextlevel():
 	global.next_level += 1
-	get_tree().change_scene_to_file(global.levels[global.next_level])
+	if global.next_level < len(global.levels):
+		get_tree().change_scene_to_file(global.levels[global.next_level])
+	else:
+		get_tree().change_scene_to_file("res://End.tscn")
 	
 func _playagain():
-	global.next_level += 0
+	global.next_level = 0
 	get_tree().change_scene_to_file(global.levels[global.next_level])

@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var pause_menu = $PauseMenu
+@onready var pause_menu = $CanvasLayer/PauseMenu
 var paused = false
 
 func _process(delta):

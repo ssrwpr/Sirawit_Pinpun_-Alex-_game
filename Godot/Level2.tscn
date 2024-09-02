@@ -52,13 +52,6 @@ scale = Vector2(1.0013, 0.997839)
 texture = ExtResource("2_og60a")
 expand_mode = 1
 
-[node name="PauseMenu" parent="." instance=ExtResource("9_5ec20")]
-visible = false
-offset_left = 581.0
-offset_top = -145.0
-offset_right = 581.0
-offset_bottom = -145.0
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_iau80")
 
@@ -90,6 +83,11 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 100
 text = "2"
 
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("9_5ec20")]
+visible = false
+offset_left = 974.0
+offset_right = 974.0
+
 [node name="Star 2" parent="." instance=ExtResource("2_lrdj3")]
 position = Vector2(-256, 220)
 rotation = -0.364448
@@ -114,7 +112,6 @@ layer_1/z_index = -1
 layer_1/tile_data = PackedInt32Array()
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 position = Vector2(1, 0)
 color = Color(0.054902, 0.054902, 0.054902, 1)
 

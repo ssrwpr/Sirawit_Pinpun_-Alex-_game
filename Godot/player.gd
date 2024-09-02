@@ -58,6 +58,8 @@ func _win(area):
 		if total_coins == global.star:
 			get_tree().change_scene_to_file("res://Win.tscn")
 			
+		
+			
 
 		
 
