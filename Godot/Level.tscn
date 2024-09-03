@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://ydt6677juhhv"]
+[gd_scene load_steps=19 format=3 uid="uid://ydt6677juhhv"]
 
 [ext_resource type="Script" path="res://Level.gd" id="1_lvsyv"]
 [ext_resource type="PackedScene" uid="uid://c408e8nqg4fc3" path="res://Coin.tscn" id="2_ctx8y"]
 [ext_resource type="Texture2D" uid="uid://c0jhw6hm3sgoc" path="res://Background.png" id="2_rudm5"]
 [ext_resource type="Script" path="res://UI.gd" id="3_3fyxr"]
 [ext_resource type="PackedScene" uid="uid://c46f07pp2oom3" path="res://Bee.tscn" id="3_n4y4c"]
+[ext_resource type="FontFile" uid="uid://bu50k341omyad" path="res://DragonHunter-9Ynxj.otf" id="4_n11u4"]
 [ext_resource type="Script" path="res://Health.gd" id="5_kw1di"]
 [ext_resource type="PackedScene" uid="uid://dsw8b1oc7iktq" path="res://Door.tscn" id="6_m8n87"]
 [ext_resource type="Texture2D" uid="uid://c372wybvqb734" path="res://TileMap.png" id="7_kon5d"]
@@ -75,6 +76,7 @@ offset_left = 16.0
 offset_top = 9.0
 offset_right = 69.0
 offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("4_n11u4")
 text = "Star: 0"
 metadata/_edit_use_anchors_ = true
 
@@ -83,6 +85,7 @@ offset_left = 83.0
 offset_top = 9.0
 offset_right = 143.0
 offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("4_n11u4")
 text = "Lives : 3"
 script = ExtResource("5_kw1di")
 
@@ -95,6 +98,7 @@ offset_right = 28.5
 offset_bottom = 137.0
 grow_horizontal = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("4_n11u4")
 theme_override_font_sizes/font_size = 100
 text = "1"
 

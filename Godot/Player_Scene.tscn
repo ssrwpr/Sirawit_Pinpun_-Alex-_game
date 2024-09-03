@@ -58,8 +58,8 @@ shape = SubResource("RectangleShape2D_pwp41")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 texture = SubResource("GradientTexture2D_yoi6d")
 
-[connection signal="area_entered" from="Area2D" to="." method="_coin"]
-[connection signal="area_entered" from="Area2D" to="." method="_portal"]
-[connection signal="area_entered" from="Area2D" to="." method="_win"]
 [connection signal="area_entered" from="Area2D" to="." method="_death"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_win"]
+[connection signal="area_entered" from="Area2D" to="." method="_coin"]
+[connection signal="area_entered" from="Area2D" to="." method="_portal"]
