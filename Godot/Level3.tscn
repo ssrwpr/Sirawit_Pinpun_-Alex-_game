@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://djbq42btptdkt"]
+[gd_scene load_steps=19 format=3 uid="uid://djbq42btptdkt"]
 
 [ext_resource type="Script" path="res://Level3.gd" id="1_8jt7r"]
 [ext_resource type="PackedScene" uid="uid://c408e8nqg4fc3" path="res://Coin.tscn" id="2_aa1lt"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bjxgaamw0n5m2" path="res://TileMapp.png" id="8_771e4"]
 [ext_resource type="PackedScene" uid="uid://blpwxgr8te36e" path="res://pause_menu.tscn" id="10_0wwu2"]
 [ext_resource type="PackedScene" uid="uid://dgp7s1qat4j6i" path="res://Portal.tscn" id="11_tys68"]
+[ext_resource type="AudioStream" uid="uid://cynebe0u51feq" path="res://Background/Zora s Domain - Day (The Legend of Zelda_ Breath of the Wild OST).ogg" id="14_juowj"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rruws"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -156,3 +157,7 @@ position = Vector2(14, 166)
 
 [node name="Area2D" parent="." instance=ExtResource("5_gqk55")]
 position = Vector2(587, 287)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_juowj")
+autoplay = true

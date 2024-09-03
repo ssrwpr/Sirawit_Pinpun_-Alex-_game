@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci66d14pkkvmj"]
+[gd_scene load_steps=3 format=3 uid="uid://ci66d14pkkvmj"]
 
 [ext_resource type="Script" path="res://How.gd" id="1_u27mr"]
+[ext_resource type="FontFile" uid="uid://bu50k341omyad" path="res://DragonHunter-9Ynxj.otf" id="2_s2a6n"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,25 +14,36 @@ script = ExtResource("1_u27mr")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 1150.0
-offset_bottom = 576.0
-theme_override_font_sizes/font_size = 40
-text = "                                              How to play?
+offset_left = 38.0
+offset_top = 52.0
+offset_right = 1131.0
+offset_bottom = 646.0
+theme_override_fonts/font = ExtResource("2_s2a6n")
+theme_override_font_sizes/font_size = 30
+text = "                                              
 
 1. First, you have to find and collect 3 stars by clicking on it.
 
 2. After you have found 3 stars, then you have to figure 
-    out how to go to the exit portal, so that you can move to 
-    the another level.
+  out how to go to the exit portal, so that you can move to 
+  the another level.
 
 3. Finish all of the levels to achieve the game."
 
 [node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 24.0
-offset_right = 308.0
-offset_bottom = 99.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.677
+anchor_right = 0.5
+anchor_bottom = 0.677
+offset_left = -159.0
+offset_top = -23.696
+offset_right = 162.0
+offset_bottom = 51.304
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_s2a6n")
 theme_override_font_sizes/font_size = 26
 text = "Esc - Pause the game
 R - Restart the game"
@@ -39,17 +51,33 @@ R - Restart the game"
 [node name="Back" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.944
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -108.0
-offset_top = -65.712
-offset_right = 106.0
-offset_bottom = -30.0
+anchor_left = 0.499
+anchor_top = 0.828
+anchor_right = 0.499
+anchor_bottom = 0.828
+offset_left = -310.848
+offset_top = 4.45596
+offset_right = 310.152
+offset_bottom = 84.456
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_s2a6n")
 theme_override_font_sizes/font_size = 46
 text = "Back To The Main Menu"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.06
+anchor_right = 0.5
+anchor_bottom = 0.06
+offset_left = -149.0
+offset_top = 8.12
+offset_right = 152.0
+offset_bottom = 55.12
+theme_override_fonts/font = ExtResource("2_s2a6n")
+theme_override_font_sizes/font_size = 40
+text = "How to play?"
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
