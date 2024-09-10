@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://blpwxgr8te36e"]
+[gd_scene load_steps=3 format=3 uid="uid://blpwxgr8te36e"]
 
 [ext_resource type="Script" path="res://pause_menu.gd" id="1_m5150"]
+[ext_resource type="FontFile" uid="uid://bu50k341omyad" path="res://DragonHunter-9Ynxj.otf" id="2_i8u6c"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -21,17 +22,20 @@ layout_mode = 2
 
 [node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_i8u6c")
 theme_override_font_sizes/font_size = 30
 text = "Resume
 "
 
 [node name="Main Menu" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_i8u6c")
 theme_override_font_sizes/font_size = 30
 text = "Main Menu"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_i8u6c")
 theme_override_font_sizes/font_size = 30
 text = "Quit
 "

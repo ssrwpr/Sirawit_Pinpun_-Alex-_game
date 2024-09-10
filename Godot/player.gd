@@ -56,7 +56,10 @@ func _death(area):
 func _win(area):
 	if area.has_meta("Door"):		
 		if total_coins == global.star:
-			get_tree().change_scene_to_file("res://Win.tscn")
+			if global.next_level + 1 < len(global.levels):
+				get_tree().change_scene_to_file("res://Win.tscn")
+			else:
+				get_tree().change_scene_to_file("res://End.tscn")
 			
 		
 			

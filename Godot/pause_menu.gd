@@ -1,9 +1,9 @@
 extends Control
 
-@onready var Level = $"../"
+@onready var Level = get_node("/root/Node2D")
 
 func _on_resume_pressed():
-	Level.pauseMenu()
+		Level.pauseMenu()
 	
 func _on_quit_pressed():
 	get_tree().quit()
