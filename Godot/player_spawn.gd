@@ -1,6 +1,6 @@
 extends Node2D
 
-
+# Get the player character from the player_scene scene
 var player_scene = preload("res://Player_Scene.tscn")
 var player = null
 

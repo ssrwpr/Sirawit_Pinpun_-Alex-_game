@@ -1,5 +1,6 @@
 extends Control
 
+# Buttons to change the scene to the game/ instructions/ credits and quit
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://Level.tscn")
 

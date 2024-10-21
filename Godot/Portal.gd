@@ -4,7 +4,7 @@ extends Area2D
 
 var lock_portal = false
 
-
+# Locking condition
 func do_lock():
 	lock_portal = true
 	await get_tree().create_timer(0.3).timeout
